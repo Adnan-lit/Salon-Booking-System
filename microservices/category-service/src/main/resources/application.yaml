@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: category-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/categorydb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 5003

@@ -1,0 +1,21 @@
+package com.adnan.payment.service.payload.dto;
+
+import com.adnan.payment.service.domain.PaymentOrderStatus;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
+@Data
+public class BookingDTO {
+
+    private Long id;
+
+    private Long salonId;
+    private Long customerId;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+    private Set<Long> serviceIds;
+    private PaymentOrderStatus status = PaymentOrderStatus.PENDING;
+    private int totalPrice;
+}
